@@ -1,10 +1,11 @@
 import * as React from 'react'
-import styles from './styles.module.css'
+import ContentEditable, { ContentEditableEvent } from 'react-contenteditable'
 
 interface Props {
-  text: string
+  html: string
+  onChange: (event: ContentEditableEvent) => void
 }
 
-export const ExampleComponent = ({ text }: Props) => {
-  return <div className={styles.test}>Example Component: {text}</div>
+export const ExampleComponent = ({ html, onChange }: Props) => {
+  return <ContentEditable html={html} onChange={onChange} />
 }
