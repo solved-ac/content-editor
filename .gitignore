@@ -1,5 +1,7 @@
-.DS_STORE
+# dependencies
 node_modules
-dist/
-coverage/
-.vscode
+/.pnp
+.pnp.js
+
+dist
+yarn-error.log
