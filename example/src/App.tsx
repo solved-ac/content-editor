@@ -1,17 +1,18 @@
 import { ThemeProvider } from '@emotion/react'
 import { Editor } from '@solved-ac/content-editor'
-import { SolvedGlobalStyles, solvedThemes, Typo } from '@solved-ac/ui-react'
+import {
+  Container,
+  SolvedGlobalStyles,
+  solvedThemes,
+  Typo
+} from '@solved-ac/ui-react'
 import React from 'react'
 
 const App = () => {
   return (
     <ThemeProvider theme={solvedThemes.light}>
       <SolvedGlobalStyles />
-      <div
-        style={{
-          padding: 16,
-        }}
-      >
+      <Container topBarPadding>
         <Typo variant="h1">@solved-ac/content-editor</Typo>
         <div
           style={{
@@ -27,7 +28,7 @@ const App = () => {
             <Editor />
           </div>
         </div>
-      </div>
+      </Container>
     </ThemeProvider>
   )
 }
